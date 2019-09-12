@@ -1,17 +1,25 @@
+
 {
     "name": "svikramjeet/hello",
-    "description": "test",
-    "keywords": ["laravel", "laravel5", "wrapper", "newsletter"],
-    "license": "MIT License",
+    "type": "library",
+    "description": "test package",
+    "keywords": ["php", "git", "pre commit", "hook"],
+    "homepage": "https://github.com/svikramjeet/git-hook",
+    "license":"MIT",
+    "require": {
+        "php": ">5.6"
+    },
+    "require-dev": {
+        "php": ">5.6"
+    },
     "authors": [
         {
             "name": "svikramjeet",
-            "email": "vikkramjeet@gmail.com"
+            "email": "vikkramjeet@gmai.com",
+            "homepage": "http://svikramjeet.me",
+            "role": "creator"
         }
     ],
-    "require": {
-        "php": ">=5.6.0"
-    },
     "autoload": {
         "psr-4": {
             "Svikramjeet\\Hello\\": "src/"
