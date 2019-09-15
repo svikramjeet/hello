@@ -1,24 +1,23 @@
 <?php
 
-namespace Svikramjeet\Hello\Providers;
+namespace Casinelli\CampaignMonitor;
 
 use Illuminate\Support\ServiceProvider;
-use Svikramjeet\Hello\CampaignMonitor;
 
-class HelloServiceProvider extends ServiceProvider
+class CampaignMonitorServiceProvider extends ServiceProvider
 {
     protected $defer = true;
 
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/campaignmonitor.php' => config_path('campaignmonitor.php'),
+            __DIR__.'/../../config/campaignmonitor.php' => config_path('campaignmonitor.php'),
         ], 'config');
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/campaignmonitor.php', 'campaignmonitor');
+        $this->mergeConfigFrom(__DIR__.'/../../config/campaignmonitor.php', 'campaignmonitor');
 
         $this->app->singleton('campaignmonitor', function ($app) {
             return new CampaignMonitor($app);
